@@ -1,0 +1,62 @@
+{
+  "navigation": {
+    "home": "Home",
+    "ai_stylist": "AI Stylist",
+    "booking": "Booking",
+    "stylists": "Stylists",
+    "gallery_contact": "Gallery",
+    "blog": "Blog",
+    "shop": "Shop",
+    "pricelist": "Pricelist",
+    "my_account": "My Account",
+    "profile": "Profile",
+    "logout": "Log Out"
+  },
+  "home": {
+    "title": "PAPI Hair DESIGN Studio",
+    "subtitle": "Experience the art of hair design. Your style, our passion.",
+    "book_appointment": "Book an Appointment",
+    "about_us_badge": "About Us",
+    "about_us_title": "Creating Beauty Since 2010",
+    "about_us_p1": "PAPI Hair Studio is more than just a salon; it's a creative space where art and expertise combine to craft your unique look. We are dedicated to providing an exceptional experience, using premium products and personalized techniques to make your hair dreams a reality.",
+    "services_title": "Our Main Services",
+    "services_subtitle": "From precision cuts to vibrant colors, we offer a full range of services to suit your needs.",
+    "services_all": "View All Services",
+    "team_title": "Meet Our Stylists",
+    "team_subtitle": "The talented artists behind the magic.",
+    "view_profile": "View Profile",
+    "gallery_title": "Our Masterpieces",
+    "gallery_subtitle": "A glimpse into the transformations we create daily.",
+    "gallery_all": "Explore Full Gallery",
+    "blog_title": "From the Studio",
+    "blog_subtitle": "Tips, trends, and stories from our stylists.",
+    "blog_all": "Read All Posts"
+  },
+  "footer": {
+    "quick_links": "Quick Links",
+    "pricelist": "Pricelist",
+    "gallery_contact": "Gallery & Contact",
+    "shop": "Shop",
+    "follow_us": "Follow Us",
+    "opening_hours": {
+      "title": "Opening Hours",
+      "weekdays": "Monday - Friday",
+      "weekends": "Saturday - Sunday",
+      "closed": "Closed",
+      "currently_open": "Currently Open",
+      "currently_closed": "Currently Closed"
+    },
+    "book_now": "Book Now",
+    "rights_reserved": "All rights reserved.",
+    "install_prompt": {
+      "title": "Install our App",
+      "description": "Get faster access and offline features.",
+      "install_button": "Install"
+    }
+  },
+  "offline": {
+    "title": "You are offline",
+    "description": "It seems you don't have an internet connection. Some features may be limited.",
+    "info": "Please check your network connection and try again. Previously loaded content should still be available."
+  }
+}

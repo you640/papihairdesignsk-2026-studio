@@ -1,0 +1,130 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "A stylish modern hair salon interior",
+      "imageUrl": "https://cloud.papihairdesign.sk/wp-content/uploads/2025/11/salon.jpg",
+      "imageHint": "salon interior"
+    },
+    {
+      "id": "about-us",
+      "description": "Stylist carefully cutting a client's hair",
+      "imageUrl": "https://images.unsplash.com/photo-1648313143853-aa913f6ad44a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoYWlyY3V0JTIwc3R5bGluZ3xlbnwwfHx8fDE3NjIxMjc2MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "haircut styling"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "Smiling woman with great hair",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzbWlsaW5nJTIwd29tYW58ZW58MHx8fHwxNzYyMDM5MjI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smiling woman"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Smiling man with a cool haircut",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc2MjA0OTI1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smiling man"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Happy woman looking sideways",
+      "imageUrl": "https://images.unsplash.com/photo-1610217523588-e2195f87a32d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzbWlsaW5nJTIwd29tYW58ZW58MHx8fHwxNzYyMDM5MjI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy woman"
+    },
+    {
+      "id": "testimonial-4",
+      "description": "Content woman with closed eyes",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzbWlsaW5nJTIwd29tYW58ZW58MHx8fHwxNzYyMDM5MjI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "content woman"
+    },
+    {
+      "id": "stylist-1",
+      "description": "Portrait of a female stylist named Olivia Chen",
+      "imageUrl": "https://images.unsplash.com/photo-1557053908-4793c484d06f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MjAzMDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "stylist-2",
+      "description": "Portrait of a male stylist named Ben Carter",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjIxMTM4MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "stylist-3",
+      "description": "Portrait of a female stylist named Sophia Rossi",
+      "imageUrl": "https://images.unsplash.com/photo-1496203695688-3b8985780d6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmVtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYyMDU4NDQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female portrait"
+    },
+    {
+      "id": "stylist-4",
+      "description": "Portrait of a male stylist named Liam Gonzalez",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYyMDIzODkyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "gallery-1",
+      "description": "A woman with a short, stylish blonde bob haircut",
+      "imageUrl": "https://images.unsplash.com/photo-1609369350243-83d11c675ff8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxibG9uZGUlMjBib2J8ZW58MHx8fHwxNzYyMTI3NjA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blonde bob"
+    },
+    {
+      "id": "gallery-2",
+      "description": "A man with a fresh fade haircut",
+      "imageUrl": "https://images.unsplash.com/photo-1647604466807-fac7582b1d6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjBmYWRlfGVufDB8fHx8MTc2MjEyNzYwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man fade"
+    },
+    {
+      "id": "gallery-3",
+      "description": "Long, wavy hair with balayage highlights",
+      "imageUrl": "https://images.unsplash.com/photo-1510074229140-bdfc2ff28550?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYWxheWFnZSUyMGhhaXJ8ZW58MHx8fHwxNzYyMDM1MTcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "balayage hair"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Vibrant fantasy hair color in shades of blue and purple",
+      "imageUrl": "https://images.unsplash.com/photo-1575727613330-89e234592ddb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmYW50YXN5JTIwaGFpcnxlbnwwfHx8fDE3NjIxMjc2MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fantasy hair"
+    },
+    {
+      "id": "gallery-5",
+      "description": "Elegant updo for a special occasion",
+      "imageUrl": "https://images.unsplash.com/photo-1760220006440-4b98ad942c53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbGVnYW50JTIwdXBkb3xlbnwwfHx8fDE3NjIxMjc2MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "elegant updo"
+    },
+    {
+      "id": "gallery-6",
+      "description": "Woman with curly red hair",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1580820258381-20c91a156841?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjdXJseSUyMGhhaXJ8ZW58MHx8fHwxNzYyMTI3NjA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "curly hair"
+    },
+    {
+      "id": "gallery-7",
+      "description": "A sharp and modern men's haircut",
+      "imageUrl": "https://images.unsplash.com/photo-1456327102063-fb5054efe647?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtZW4lMjBoYWlyY3V0fGVufDB8fHx8MTc2MjEyNzYwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "men haircut"
+    },
+    {
+      "id": "gallery-8",
+      "description": "A woman smiling, showing off her new haircut",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzYyMDcxMzA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "product-1",
+      "description": "Bottle of hydrating shampoo",
+      "imageUrl": "https://images.unsplash.com/photo-1660090455967-24cf8b0eb58d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaGFtcG9vJTIwYm90dGxlfGVufDB8fHx8MTc2MjEyNzYwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "shampoo bottle"
+    },
+    {
+      "id": "product-2",
+      "description": "Jar of nourishing hair mask",
+      "imageUrl": "https://images.unsplash.com/photo-1732861612244-5704d12e9397?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoYWlyJTIwbWFza3xlbnwwfHx8fDE3NjIxMjc2MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hair mask"
+    },
+    {
+      "id": "product-3",
+      "description": "Bottle of styling serum",
+      "imageUrl": "https://images.unsplash.com/photo-1696025522422-aa9a74e4f3d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzZXJ1bSUyMGJvdHRsZXxlbnwwfHx8fDE3NjIwOTgxMTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "serum bottle"
+    }
+  ]
+}

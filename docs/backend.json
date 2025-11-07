@@ -1,0 +1,321 @@
+
+{
+  "entities": {
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents a user of the PAPI Hair DESIGN Studio application.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user."
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address.",
+          "format": "email"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User's display name."
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "URL of the user's profile photo.",
+          "format": "uri"
+        },
+        "fcmTokens": {
+          "type": "array",
+          "description": "Array of Firebase Cloud Messaging tokens for push notifications.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "email"
+      ]
+    },
+    "Stylist": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Stylist",
+      "type": "object",
+      "description": "Represents a stylist at PAPI Hair DESIGN Studio.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the stylist."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the stylist."
+        },
+        "bio": {
+          "type": "string",
+          "description": "Biography of the stylist."
+        },
+        "specialty": {
+          "type": "string",
+          "description": "The stylist's area of expertise."
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "URL of the stylist's profile photo.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "specialty"
+      ]
+    },
+    "Service": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Service",
+      "type": "object",
+      "description": "Represents a service offered at PAPI Hair DESIGN Studio.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the service."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the service."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the service."
+        },
+        "price": {
+          "type": "number",
+          "description": "Price of the service."
+        },
+        "duration": {
+          "type": "number",
+          "description": "Duration of the service in minutes."
+        },
+        "category": {
+          "type": "string",
+          "description": "Category of the service (e.g., Ladies, Gents)."
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "price",
+        "duration"
+      ]
+    },
+    "Product": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Product",
+      "type": "object",
+      "description": "Represents a product sold at PAPI Hair DESIGN Studio.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the product."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the product."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the product."
+        },
+        "price": {
+          "type": "number",
+          "description": "Price of the product."
+        },
+        "imageURL": {
+          "type": "string",
+          "description": "URL of the product image.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "price"
+      ]
+    },
+    "BlogPost": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "BlogPost",
+      "type": "object",
+      "description": "Represents a blog post on the PAPI Hair DESIGN Studio website.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the blog post."
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the blog post."
+        },
+        "slug": {
+          "type": "string",
+          "description": "URL-friendly slug for the blog post."
+        },
+        "content": {
+          "type": "string",
+          "description": "Content of the blog post."
+        },
+        "imageURL": {
+          "type": "string",
+          "description": "URL of the blog post image.",
+          "format": "uri"
+        },
+        "authorId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N BlogPost)"
+        },
+        "publishDate": {
+          "type": "string",
+          "description": "Date when the blog post was published.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "slug",
+        "content",
+        "authorId",
+        "publishDate"
+      ]
+    },
+    "Appointment": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Appointment",
+      "type": "object",
+      "description": "Represents an appointment booked at PAPI Hair DESIGN Studio.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the appointment."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N Appointment)"
+        },
+        "stylistId": {
+          "type": "string",
+          "description": "Reference to Stylist. (Relationship: Stylist 1:N Appointment)"
+        },
+        "serviceId": {
+          "type": "string",
+          "description": "Reference to Service. (Relationship: Service 1:N Appointment)"
+        },
+        "startTime": {
+          "type": "string",
+          "description": "Start time of the appointment.",
+          "format": "date-time"
+        },
+        "endTime": {
+          "type": "string",
+          "description": "End time of the appointment.",
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string",
+          "description": "Status of the appointment (e.g., booked, confirmed, cancelled)."
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "stylistId",
+        "serviceId",
+        "startTime",
+        "endTime",
+        "status"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "User",
+          "schema": {
+            "$ref": "#/backend/entities/User"
+          },
+          "description": "Stores user profiles. Path-based ownership ensures only the user can access their own profile."
+        }
+      },
+      {
+        "path": "/stylists/{stylistId}",
+        "definition": {
+          "entityName": "Stylist",
+          "schema": {
+            "$ref": "#/backend/entities/Stylist"
+          },
+          "description": "Stores stylist profiles. Accessible to all users, but modifications are restricted to admins."
+        }
+      },
+      {
+        "path": "/services/{serviceId}",
+        "definition": {
+          "entityName": "Service",
+          "schema": {
+            "$ref": "#/backend/entities/Service"
+          },
+          "description": "Stores service details. Accessible to all users, but modifications are restricted to admins."
+        }
+      },
+      {
+        "path": "/products/{productId}",
+        "definition": {
+          "entityName": "Product",
+          "schema": {
+            "$ref": "#/backend/entities/Product"
+          },
+          "description": "Stores product information. Accessible to all users, but modifications are restricted to admins."
+        }
+      },
+      {
+        "path": "/blogPosts/{blogPostId}",
+        "definition": {
+          "entityName": "BlogPost",
+          "schema": {
+            "$ref": "#/backend/entities/BlogPost"
+          },
+          "description": "Stores blog posts. Publicly accessible, but modifications are restricted to admins or the author."
+        }
+      },
+      {
+        "path": "/appointments/{appointmentId}",
+        "definition": {
+          "entityName": "Appointment",
+          "schema": {
+            "$ref": "#/backend/entities/Appointment"
+          },
+          "description": "Stores appointment details. Contains 'userId' and 'stylistId' for relation mapping. Accessible to admins and the associated user."
+        }
+      },
+      {
+        "path": "/roles_admin/{userId}",
+        "definition": {
+          "entityName": "User",
+          "schema": {
+            "$ref": "#/backend/entities/User"
+          },
+          "description": "Collection used to define administrative roles. Existence of a document implies admin rights."
+        }
+      }
+    ]
+  }
+}

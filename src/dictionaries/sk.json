@@ -1,0 +1,83 @@
+
+{
+  "navigation": {
+    "home": "Domov",
+    "booking": "Rezervácia",
+    "stylists": "Štylisti",
+    "blog": "Blog",
+    "shop": "Obchod",
+    "pricelist": "Cenník",
+    "my_account": "Môj účet",
+    "profile": "Profil",
+    "logout": "Odhlásiť sa"
+  },
+  "home": {
+    "title": "PAPI Hair DESIGN Studio",
+    "subtitle": "Zažite umenie vlasového dizajnu. Váš štýl, naša vášeň.",
+    "book_appointment": "Rezervovať si termín",
+    "about_us_badge": "O nás",
+    "about_us_title": "Tvoríme krásu od roku 2010",
+    "about_us_p1": "PAPI Hair Studio je viac než len salón; je to kreatívny priestor, kde sa spája umenie a odbornosť, aby vytvorili váš jedinečný vzhľad. Sme odhodlaní poskytovať výnimočný zážitok s použitím prvotriednych produktov a personalizovaných techník, aby sme splnili vaše vlasové sny.",
+    "services_title": "Naše hlavné služby",
+    "services_subtitle": "Od precíznych strihov po žiarivé farby, ponúkame celý rad služieb, ktoré vyhovujú vašim potrebám.",
+    "services_all": "Zobraziť všetky služby",
+    "team_title": "Zoznámte sa s našimi štylistami",
+    "team_subtitle": "Talentovaní umelci, ktorí stoja za úspechom PAPI HAIR DESIGN. Každý z nich prináša jedinečné zručnosti a vášeň pre vlasový design.",
+    "view_profile": "Zobraziť profil",
+    "gallery_title": "Naše Práce",
+    "gallery_subtitle": "Inšpirujte sa ukážkami našich najnovších prác a objavte svoj budúci štýl.",
+    "blog_title": "Zo štúdia",
+    "blog_subtitle": "Tipy, trendy a príbehy od našich štylistov.",
+    "blog_all": "Prečítať všetky príspevky"
+  },
+  "features_grid": {
+    "badge": "Prečo si vybrať nás",
+    "title": "Záruka vašej spokojnosti",
+    "subtitle": "V PAPI Hair Design kladieme dôraz na tri piliere, ktoré zaručujú, že od nás budete odchádzať s úsmevom.",
+    "features": [
+      {
+        "title": "Prvotriedna kvalita",
+        "description": "Používame len tie najlepšie produkty a techniky, aby sme zaručili dokonalý výsledok pre vaše vlasy."
+      },
+      {
+        "title": "Skúsení štylisti",
+        "description": "Náš tím tvoria talentovaní a kreatívni profesionáli s rokmi skúseností a vášňou pre vlasový dizajn."
+      },
+      {
+        "title": "Personalizovaný prístup",
+        "description": "Každému klientovi sa venujeme individuálne. Vypočujeme vaše predstavy a poradíme vám štýl, ktorý vám pristane."
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Naši klienti",
+    "title": "Čo o nás hovoria",
+    "subtitle": "Vaša spokojnosť je našou najlepšou vizitkou. Prečítajte si, čo si o nás myslia naši verní zákazníci."
+  },
+  "footer": {
+    "quick_links": "Rýchle odkazy",
+    "pricelist": "Cenník",
+    "shop": "Obchod",
+    "follow_us": "Sledujte nás",
+    "opening_hours": {
+      "title": "Otváracie hodiny",
+      "weekdays": "Pondelok - Piatok",
+      "weekends": "Sobota - Nedeľa",
+      "closed": "Zatvorené",
+      "currently_open": "Momentálne otvorené",
+      "currently_closed": "Momentálne zatvorené"
+    },
+    "book_now": "Rezervovať",
+    "rights_reserved": "Všetky práva vyhradené.",
+    "install_prompt": {
+      "title": "Nainštalujte si našu aplikáciu",
+      "description": "Získajte rýchlejší prístup a offline funkcie.",
+      "install_button": "Inštalovať"
+    }
+  },
+  "offline": {
+    "title": "Ste offline",
+    "description": "Zdá sa, že nemáte pripojenie na internet. Niektoré funkcie môžu byť obmedzené.",
+    "info": "Skontrolujte svoje sieťové pripojenie a skúste to znova. Predchádzajúci obsah by mal byť stále dostupný."
+  }
+}
