@@ -7,7 +7,7 @@ import jsPDF from 'jspdf';
 import useSWR from 'swr';
 import Slider from 'rc-slider';
 import '@/rc-slider.css';
-import Head from 'next/head';
+
 import { useTranslation } from 'next-i18next';
 
 
@@ -219,48 +219,6 @@ export default function WpCennik() {
 
   return (
     <>
-      <Head>
-        <title>{t('priceListTitle', 'Cenník služieb')} | PAPI Hair DESIGN Studio</title>
-        <meta name="description" content={t('priceListDescription', 'Profesionálny cenník kaderníckych služieb. Dámske, pánske, styling, wellness, farbenie, brada, a ďalšie služby.')} />
-        {/* Open Graph meta tags */}
-        <meta property="og:title" content={t('priceListTitle', 'Cenník služieb') + ' | PAPI Hair DESIGN Studio'} />
-        <meta property="og:description" content={t('priceListDescription', 'Profesionálny cenník kaderníckych služieb.')} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://papihairdesign.sk/cennik" />
-  <meta property="og:image" content="/logo.png" />
-        {/* Twitter Card meta tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={t('priceListTitle', 'Cenník služieb') + ' | PAPI Hair DESIGN Studio'} />
-        <meta name="twitter:description" content={t('priceListDescription', 'Profesionálny cenník kaderníckych služieb.')} />
-  <meta name="twitter:image" content="/logo.png" />
-        {/* Rozšírený JSON-LD */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Cenník služieb",
-          "provider": {
-            "@type": "Organization",
-            "name": "PAPI Hair DESIGN Studio"
-          },
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Služby",
-            "itemListElement": filtered.map(s => ({
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": s.post_title,
-                "description": s.post_desc,
-                "image": s.image_url,
-                "review": s.reviews || [],
-                "availability": s.availability || "https://schema.org/InStock"
-              },
-              "price": s.akcna_cena || s.post_price,
-              "priceCurrency": "EUR"
-            }))
-          }
-        }) }} />
-      </Head>
       <div className="max-w-6xl mx-auto p-4">
   <h1 className="text-3xl font-bold mb-4">{t('priceListTitle', 'Cenník služieb')}</h1>
         <div className="flex flex-wrap gap-4 mb-6">
