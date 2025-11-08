@@ -1,0 +1,83 @@
+/* rc-slider custom styles for Next.js compatibility and dark theme.
+   Copy of node_modules/rc-slider/assets/index.css, with possible overrides for barbershop dark design. */
+
+/* Basic rc-slider styles (copied from rc-slider/assets/index.css) */
+.rc-slider {
+  position: relative;
+  height: 32px;
+  padding: 10px 0;
+  width: 100%;
+}
+.rc-slider-rail {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #222;
+  border-radius: 2px;
+}
+.rc-slider-track {
+  position: absolute;
+  height: 4px;
+  background: #eab308;
+  border-radius: 2px;
+}
+.rc-slider-handle {
+  position: absolute;
+  margin-left: -7px;
+  margin-top: -7px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid #eab308;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.rc-slider-handle:active {
+  border-color: #f59e42;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.rc-slider-mark {
+  position: absolute;
+  top: 18px;
+  width: 100%;
+  font-size: 12px;
+  color: #bbb;
+}
+.rc-slider-dot {
+  position: absolute;
+  bottom: -2px;
+  width: 8px;
+  height: 8px;
+  background: #222;
+  border-radius: 50%;
+  border: 2px solid #eab308;
+}
+.rc-slider-dot-active {
+  background: #eab308;
+}
+/* Dark theme overrides for barbershop style */
+.rc-slider {
+  background: transparent;
+}
+.rc-slider-rail {
+  background: #222;
+}
+.rc-slider-track {
+  background: #eab308;
+}
+.rc-slider-handle {
+  background: #222;
+  border: 2px solid #eab308;
+}
+.rc-slider-handle:active {
+  border-color: #f59e42;
+}
+.rc-slider-dot {
+  background: #222;
+  border: 2px solid #eab308;
+}
+.rc-slider-dot-active {
+  background: #eab308;
+}

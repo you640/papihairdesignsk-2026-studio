@@ -11,6 +11,7 @@ const phdButtonVariants = cva(
     variants: {
       variant: {
         default: 'bg-primary hover:bg-brand-gold-hover hover:shadow-button-hover',
+        outline: 'border border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground',
       },
     },
     defaultVariants: {

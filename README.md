@@ -1,5 +1,11 @@
 # PAPI Hair DESIGN Studio (Next.js PWA)
 
+---
+
+## PWA Theme Color Compatibility
+
+> Poznámka: Meta tag `<meta name="theme-color" ...>` je podporovaný v Chrome/Edge a väčšine Android prehliadačov. Firefox, Opera a Firefox for Android tento tag ignorujú. Pre maximálnu kompatibilitu je fallback farba nastavená v CSS na `<body>`.
+
 This is a modern, installable Progressive Web App (PWA) for PAPI Hair DESIGN Studio, built with Next.js, Firebase, and ShadCN UI.
 
 The logo used in the application header is a default logo provided for the project.
@@ -8,11 +14,14 @@ The logo used in the application header is a default logo provided for the proje
 
 ## Visual Style and Design Specification
 
+
 This section serves as a technical manual for the application's visual identity, detailing the design tokens, animations, and component styles.
 
 ### 1. Design Tokens
 
+
 #### 1.1. Color Palette
+
 
 The color scheme is defined as CSS variables in `src/app/globals.css` and is built for a "dark-first" experience.
 
@@ -35,12 +44,14 @@ The color scheme is defined as CSS variables in `src/app/globals.css` and is bui
 
 #### 1.2. Typography
 
+
 Two primary fonts are used, configured in `src/app/[lang]/layout.tsx` and applied in `tailwind.config.ts`.
 
 - **Headline Font:** `Playfair Display` (serif) - Used for all headings (`h1`-`h6`).
 - **Body Font:** `Inter` (sans-serif) - Used for all body text.
 
 ### 2. Animation Library (Visual Physics)
+
 
 Animations are handled primarily by **Framer Motion** and **Tailwind CSS keyframes**.
 
@@ -54,6 +65,7 @@ Animations are handled primarily by **Framer Motion** and **Tailwind CSS keyfram
 - **Image Hover Zoom:** Gallery and stylist images smoothly scale up to `1.05` on hover. This is configured in `tailwind.config.ts` and applied with `group-hover:scale-105`.
 
 ### 3. Key Component Styling
+
 
 - **Header (`header.tsx`):**
   - `position: sticky`, `top: 0`, `z-index: 40`.
@@ -84,24 +96,33 @@ Animations are handled primarily by **Framer Motion** and **Tailwind CSS keyfram
 
 ## Kompletný Cenník Služieb
 
+
 ### DÁMSKY CENNÍK
 
+
 #### Strihy a styling
+
 - **Strih:** od 30 € *(umytie, strihanie, styling, trvanie: 1 h)*
 - **Finálny styling:** od 20 € *(úprava účesu na konkrétnu príležitosť, trvanie: 30 min.)*
 - **Spoločenský účes:** 40 € *(detailný styling na spoločenské udalosti, trvanie: 1 h)*
-- **Fúkaná (polodlhé vlasy):** 20 € *(trvanie: 30 min.)*
+- **Fúkaná (
 - **Fúkaná (dlhé vlasy):** 30 € *(trvanie: 1 h)*
 
+
 #### Copríky a špeciálne účesy
+
 - **Copíky / braids:** od 30 € *(komplexné pletenie a styling, trvanie: 4 h)*
 
+
 #### Ošetrenie a keratín
+
 - **Brazílsky keratín:** od 130 € *(hlboká regenerácia a vyhladenie vlasov, trvanie: 3 h)*
 - **Methamorphyc exclusive:** 50 € *(exkluzívna kúra s intenzívnou starostlivosťou, trvanie: 1 h 30 min.)*
 - **Methamorphyc quick:** od 35 € *(rýchla regenerácia a lesk vlasov, trvanie: 1 h)*
 
+
 #### Farbenie a odlesky
+
 - **Farbenie (celé vlasy):** 70 € *(trvanie: 2 h)*
 - **Farbenie (odrasty):** 45 € *(trvanie: 1 h 30 min.)*
 - **Farbenie + strih (celé vlasy):** 90 € *(trvanie: 2 h)*
@@ -109,7 +130,9 @@ Animations are handled primarily by **Framer Motion** and **Tailwind CSS keyfram
 - **Zosvetľovanie / gumovanie farby:** od 160 € *(trvanie: 4 h)*
 - **Čistenie odleskov:** od 100 € *(trvanie: 3 h)*
 
+
 #### Melíry a balayage
+
 - **Melír (odrasty):** od 120 € *(trvanie: 3 h)*
 - **Melír (celé vlasy):** od 150 € *(trvanie: 4 h)*
 - **Balayage (doplnenie odrastov):** od 120 € *(trvanie: 3 h)*
@@ -117,31 +140,43 @@ Animations are handled primarily by **Framer Motion** and **Tailwind CSS keyfram
 - **Airtouch (doplnenie odrastov):** od 140 € *(trvanie: 4 h)*
 - **Airtouch (celé vlasy):** od 170 € *(trvanie: 5 h)*
 
+
 #### Predlžovanie vlasov
+
 - **Napojenie TAPE IN:** od 40 € *(trvanie: 1 h)*
 - **Prepojenie TAPE IN:** od 120 € *(trvanie: 2 h 30 min.)*
+
 
 ---
 
 ### PÁNSKY CENNÍK
 
+
 #### Strihy a úprava vlasov
+
 - **Pánsky strih:** 19 €
 - **Junior strih:** 15 €
 - **Vlasy + brada:** 27 €
 - **Pánsky špeciál:** 50 €
 
+
 #### Brada a fúzy
+
 - **Úprava brady:** 12 €
 - **Farbenie brady:** 10 €
 
+
 #### Farbenie a špeciálne techniky
+
 - **Tónovanie šedín:** 10 € *(trvanie: 30 min.)*
 - **Zosvetľovanie vlasov:** 40 € *(trvanie: 1 h 30 min.)*
 - **Trvalá ondulácia:** 40 € *(trvanie: 1 h 30 min.)*
 
+
 #### Wellness & starostlivosť
+
 - **Depilácia nosa:** 5 € *(trvanie: 10 min.)*
 - **Depilácia uší:** 5 € *(trvanie: 10 min.)*
 - **Peeling / čierna maska:** 10 € *(trvanie: 25 min.)*
 - **Ušné sviečky:** 10 € *(trvanie: 20 min.)*
+

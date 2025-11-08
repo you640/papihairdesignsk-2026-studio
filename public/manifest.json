@@ -1,21 +1,12 @@
 {
-  "name": "PAPI Hair DESIGN Studio",
-  "short_name": "PAPI Studio",
-  "description": "Modern PWA for PAPI Hair DESIGN Studio.",
-  "start_url": "/",
+  "name": "PAPI Hair Design",
+  "short_name": "PAPI",
+  "theme_color": "#111111",
+  "background_color": "#000000",
   "display": "standalone",
-  "background_color": "#101010",
-  "theme_color": "#D4AF37",
+  "start_url": "/",
   "icons": [
-    {
-      "src": "https://cloud.papihairdesign.sk/wp-content/uploads/2025/10/favicon-phd0-e1761482330126.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "https://cloud.papihairdesign.sk/wp-content/uploads/2025/10/favicon-phd0-e1761482330126.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }

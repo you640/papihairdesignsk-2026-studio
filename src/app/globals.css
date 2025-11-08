@@ -1,9 +1,13 @@
-
 @import url('https://api.fontshare.com/v2/css?f[]=general-sans@200,300,400,500,600,700&display=swap');
 
+/* tailwindcss */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #D4AF37;
+}
 
 @layer base {
   :root {
@@ -28,7 +32,7 @@
 
     --accent: 0 0% 94.1%; /* #f0f0f0 */
     --accent-foreground: 240 10% 3.9%;
-    
+
     --destructive: 0 84.2% 60.2%; /* #ff4d4d */
     --destructive-foreground: 0 0% 98%;
 
@@ -61,7 +65,7 @@
 
     --accent: 240 5% 26%;
     --accent-foreground: 0 0% 94%;
-    
+
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 94%;
 

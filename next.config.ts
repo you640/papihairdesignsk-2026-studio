@@ -2,7 +2,13 @@
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
-  output: isProd ? "export" : undefined,
+  experimental: {
+    turbo: {
+      rootDirectory: __dirname
+    }
+  },
+  outputFileTracingRoot: __dirname,
+  // output: isProd ? "export" : undefined,
   images: {
     unoptimized: isProd,
     remotePatterns: [
@@ -60,5 +66,10 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+})
 
-module.exports = withBundleAnalyzer(nextConfig);
+module.exports = withBundleAnalyzer(withPWA(nextConfig));

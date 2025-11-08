@@ -85,7 +85,7 @@ export function HomePageClient({
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>
-          <PhdButton asChild variant="outline" className="mt-12">
+          <PhdButton asChild variant="default" className="mt-12">
             <Link href={`/cennik`}>{t.services_all}</Link>
           </PhdButton>
         </div>
