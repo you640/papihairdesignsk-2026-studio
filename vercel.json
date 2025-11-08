@@ -2,5 +2,6 @@
   "framework": "nextjs",
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "ignoreCommand": "echo 'Vercel ignores .env.local by default'"
+  "ignoreCommand": "echo 'Vercel ignores .env.local by default'",
+  "installCommand": "npm install --legacy-peer-deps"
 }
