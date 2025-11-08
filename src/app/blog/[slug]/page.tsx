@@ -1,4 +1,3 @@
-import { notFound } from 'next/navigation';
 import { initializeFirebase } from '@/firebase';
 import { collection, query, where, limit, getDocs, DocumentData } from 'firebase/firestore';
 import { BlogPost } from '@/lib/types';

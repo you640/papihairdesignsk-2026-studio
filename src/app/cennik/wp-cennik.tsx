@@ -40,7 +40,6 @@ function unique(arr: string[]) {
 
 export default function WpCennik() {
   const { t } = useTranslation();
-  const [filtered, setFiltered] = useState<Service[]>([]);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 200]);
   const [durationRange, setDurationRange] = useState<[number, number]>([0, 240]);
   const [showAkcia, setShowAkcia] = useState(false);
@@ -54,15 +53,14 @@ export default function WpCennik() {
     revalidateOnFocus: false,
     dedupingInterval: 60000,
   });
+  const [filtered, setFiltered] = useState<Service[]>(services);
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('');
   const [subcategory, setSubcategory] = useState('');
   const [sort, setSort] = useState('');
   const [showDetail, setShowDetail] = useState<Service | null>(null);
 
-  useEffect(() => {
-    setFiltered(services);
-  }, [services]);
+
 
   useEffect(() => {
     let data = [...services];
