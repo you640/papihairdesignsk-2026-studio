@@ -12,6 +12,29 @@ The logo used in the application header is a default logo provided for the proje
 
 ---
 
+## Setup & Environment Variables
+
+Firebase configuration is read from environment variables (see `src/firebase/config.ts`). **The production build fails without them** (prerendering throws `auth/invalid-api-key`), so define them in `.env.local` (or in Vercel/Firebase App Hosting project settings):
+
+```
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=        # optional
+NEXT_PUBLIC_FIREBASE_MESSAGING_VAPID_KEY=   # optional, for push notifications
+```
+
+Install dependencies with `npm install --legacy-peer-deps` (there is a peer-dependency conflict: `@genkit-ai/next` requires Next 15 while the project uses Next 16). Then:
+
+- `npm run dev` – dev server on port **9003**
+- `npm run build` – production build
+- `npm run typecheck` – TypeScript check
+
+---
+
 ## Visual Style and Design Specification
 
 
@@ -23,7 +46,7 @@ This section serves as a technical manual for the application's visual identity,
 #### 1.1. Color Palette
 
 
-The color scheme is defined as CSS variables in `src/app/globals.css` and is built for a "dark-first" experience.
+The color scheme is defined as CSS variables in `src/app/globals.css`. Both a light (`:root`, default) and a dark (`.dark`) theme are defined; the app is "dark-first" because `AppProvider` defaults the theme to `dark` (persisted in `localStorage`). The table below documents the **dark theme** values:
 
 | Token | HSL Variable | Hex | Description |
 | :--- | :--- | :--- | :--- |
@@ -45,10 +68,10 @@ The color scheme is defined as CSS variables in `src/app/globals.css` and is bui
 #### 1.2. Typography
 
 
-Two primary fonts are used, configured in `src/app/[lang]/layout.tsx` and applied in `tailwind.config.ts`.
+Two primary fonts are used, configured in `src/app/layout.tsx` (Inter via `next/font`) and `src/app/globals.css` (General Sans via Fontshare import), and applied in `tailwind.config.ts`.
 
-- **Headline Font:** `Playfair Display` (serif) - Used for all headings (`h1`-`h6`).
-- **Body Font:** `Inter` (sans-serif) - Used for all body text.
+- **Headline Font:** `General Sans` (sans-serif) - Used for all headings (`font-headline`).
+- **Body Font:** `Inter` (sans-serif) - Used for all body text (`font-body`).
 
 ### 2. Animation Library (Visual Physics)
 
@@ -56,10 +79,10 @@ Two primary fonts are used, configured in `src/app/[lang]/layout.tsx` and applie
 Animations are handled primarily by **Framer Motion** and **Tailwind CSS keyframes**.
 
 - **Page Transitions:** A soft fade-and-slide effect (`PageTransition.tsx`) is applied on route changes.
-  - **Physics:** `opacity: 0 -> 1`, `translateY: 1vh -> 0`. Duration: `400ms`.
+  - **Physics:** `opacity: 0 -> 1`, `translateY: 10px -> 0` (tween, ease `anticipate`). Duration: `500ms`.
 - **Button Effects (`PhdButton.tsx`):**
-  - **Hover:** A subtle lift (`translateY(-2px)`) and a background color change.
-  - **Click Ripple:** A ripple effect originates from the click point, animated with Framer Motion.
+  - **Hover:** A subtle lift (`-translate-y-0.5`, tj. -2px) and a background/shadow change (`hover:bg-brand-gold-hover`, `hover:shadow-button-hover`).
+  - **Click:** A press effect via `active:scale-95` (CSS transition, no Framer Motion ripple).
 - **Hero Content Stagger:** Elements in the hero section fade and slide in sequentially.
   - **Delay:** `500ms` initial delay, `300ms` between child elements.
 - **Image Hover Zoom:** Gallery and stylist images smoothly scale up to `1.05` on hover. This is configured in `tailwind.config.ts` and applied with `group-hover:scale-105`.
@@ -71,11 +94,11 @@ Animations are handled primarily by **Framer Motion** and **Tailwind CSS keyfram
   - `position: sticky`, `top: 0`, `z-index: 40`.
   - `height: 5rem`.
   - `background-color: var(--brand-secondary)`.
-  - `border-bottom: 1px solid hsla(45, 63%, 52%, 0.2)`.
+  - `border-bottom: 1px solid rgba(255, 255, 255, 0.1)` (`border-white/10`).
 
 - **Admin Sidebar (`admin/layout.tsx`):**
-  - `width: 16rem`.
-  - `background-color: var(--brand-secondary)`.
+  - `width: 16rem` (`w-64`).
+  - `background-color: hsl(var(--card))` (`bg-card`).
   - Active Link Style: `bg-primary/10`, `text-primary`, `border-r-4 border-primary`.
 
 - **Footer (`footer.tsx`):**
@@ -87,10 +110,10 @@ Animations are handled primarily by **Framer Motion** and **Tailwind CSS keyfram
   - Focus states consistently use `ring-primary` for a clear visual cue.
 
 - **Interactive Pricelist (`/cennik`):**
-  - Built with ShadCN `Tabs` and `Accordion` components for a clean, organized, and interactive layout.
-  - The pricelist is divided into "Dámsky cenník" and "Pánsky cenník" using tabs. Within each tab, services are grouped into collapsible categories (e.g., "Strihy a styling", "Farbenie").
-  - Data Source: All pricing information is managed centrally in `src/lib/pricelist-data.ts`, making updates easy and consistent.
-  - Each category is highlighted with a unique icon from `lucide-react`, and the overall design follows the application's luxurious dark theme with gold accents.
+  - Implemented in `src/app/cennik/wp-cennik.tsx` as a client component.
+  - Data Source: Services are fetched live (via SWR) from an external WordPress API (`https://api.all4all.sk/wp-json/query/services/`).
+  - Features: full-text search, category/subcategory filters, price and duration range sliders (`rc-slider`), multi-sort, CSV export (`react-csv`), PDF export (`jspdf`) and a booking link to Bookio.
+  - Note: `src/lib/pricelist-data.ts` contains a static copy of the pricelist (with `lucide-react` category icons), but it is currently not imported by any page — the live API is the source of truth. The full static pricelist is documented below.
 
 ---
 
@@ -105,7 +128,7 @@ Animations are handled primarily by **Framer Motion** and **Tailwind CSS keyfram
 - **Strih:** od 30 € *(umytie, strihanie, styling, trvanie: 1 h)*
 - **Finálny styling:** od 20 € *(úprava účesu na konkrétnu príležitosť, trvanie: 30 min.)*
 - **Spoločenský účes:** 40 € *(detailný styling na spoločenské udalosti, trvanie: 1 h)*
-- **Fúkaná (
+- **Fúkaná (polodlhé vlasy):** 20 € *(trvanie: 30 min.)*
 - **Fúkaná (dlhé vlasy):** 30 € *(trvanie: 1 h)*
 
 
